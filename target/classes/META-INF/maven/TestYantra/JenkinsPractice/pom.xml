@@ -73,7 +73,7 @@
   
   <profiles>
 	  <profile>
-		  <id>smokesuite</id>
+		  <id>smoke</id>
 		  <build>
 			  <pluginManagement>
 				  <plugins>
@@ -83,7 +83,26 @@
         <version>3.2.5</version>
         <configuration>
           <suiteXmlFiles>
-            <suiteXmlFile>Sampletestng.xml</suiteXmlFile>
+            <suiteXmlFile>groupexe.xml</suiteXmlFile>
+          </suiteXmlFiles>
+        </configuration>
+      </plugin>
+				  </plugins>
+			  </pluginManagement>
+		  </build>
+	  </profile>
+	   <profile>
+		  <id>regression</id>
+		  <build>
+			  <pluginManagement>
+				  <plugins>
+					  <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.2.5</version>
+        <configuration>
+          <suiteXmlFiles>
+            <suiteXmlFile>groupexe.xml</suiteXmlFile>
           </suiteXmlFiles>
         </configuration>
       </plugin>
